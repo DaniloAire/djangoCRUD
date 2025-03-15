@@ -11,12 +11,13 @@ from api.views.webViews import *
 
 urlpatterns = [ 
     # path('api/', include(router.urls)),
-    path('api/user/', User.as_view(), name="usuariosAPI"),
+    path('api/user', User.as_view(), name="usuariosAPI"),
     path('api/user/<int:id>',User.as_view(), name="usuarioDetalhe"),
     path('api/login/', Login.as_view(), name="loginAPI"),
     path('home/', home, name="home"),
     path('login/', login, name="login"),
     path('criarAluno/', criarAluno, name="criarAluno"),
+    path('criarAluno/<int:id>', criarAluno, name="criarAlunoEdicao"),
 
     # path('funcionarios/', listarFuncionarios, name='listarFuncionarios'),
     # path('funcionarios/cadastrar', cadastrarFuncionario, name='cadastrarFuncionario'),
